@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name
@@ -7,18 +8,20 @@ class Plant:
         self.age = age
 
     def show(self) -> None:
-        print(
-            f"{self.name.capitalize()}: "
-            f"{self.height}cm, {self.age} days old"
-        )
+        print(f"Created: {self.name.capitalize()}: {self.height:.1f}cm, "
+              f"{self.age} days old")
 
 
 if __name__ == "__main__":
     rose = Plant("rose", 25.0, 30)
+    oak = Plant("oak", 200.0, 365)
+    cactus = Plant("cactus", 5.0, 90)
     sunflower = Plant("sunflower", 80.0, 45)
-    cactus = Plant("cactus", 15.0, 120)
+    fern = Plant("fern", 15.0, 120)
 
-    print("=== Garden Plant Registry ===")
+    print("=== Plant Factory Output  ===")
     rose.show()
-    sunflower.show()
+    oak.show()
     cactus.show()
+    sunflower.show()
+    fern.show()
